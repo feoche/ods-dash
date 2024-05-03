@@ -8,9 +8,6 @@ global:
         x: false
     html:
       html: >-
-        <script>
-          document.title = "Your New Title Here";
-        </script>
         <div id="${this}" class="card-pf card-pf-aggregate-status" style="font-family: 'Source Sans Pro'; border: solid 1px #b3b3b3; box-shadow:none; width: 85%; margin: 0 10px; padding-bottom: 10px; border-radius: 8px; color: #00185e">
           <h2 style="font-weight: 700; font-size: x-large;" id="${this}Title"><em id="${this}Icon" class=""></em> ${title}</h2>
           <h3 style="font-weight: 700; font-size: xxx-large; color: #4d5592" id="${this}Value">${value} <span id="${this}Suffix" class=""></span></h3>
@@ -343,7 +340,7 @@ pages:
                               "yAxis": [
                                 {
                                   "type": "value",
-                                  "name": "Number of components"
+                                  "name": "Number of \ncomponents"
                                 }
                               ],
                                 "toolbox": {
@@ -433,7 +430,7 @@ pages:
                                 "yAxis": [
                                   {
                                     "type": "value",
-                                    "name": "Number of components"
+                                    "name": "Number of \ncomponents"
                                   }
                                 ],
                                 "tooltip": {
@@ -555,7 +552,7 @@ pages:
                     - functions:
                         - source: Unique visitors
                           function: AVERAGE
-        - span: 12
+        - span: 6
           properties:
             margin-top: 30px
             margin-bottom: 30px
@@ -566,7 +563,7 @@ pages:
                     option: >-
                             {
                                 "title": {
-                                  "text": "Page views & unique visitors per month",
+                                  "text": "Page views month",
                                   "textStyle": {
                                     "color": "#00185e"
                                   }
@@ -595,11 +592,6 @@ pages:
                                   {
                                     "type": "value",
                                     "name": "Page views"
-                                  },
-                                  {
-                                    "type": "value",
-                                    "name": "Unique visitors",
-                                    "max": 250
                                   }
                                 ],
                                 "tooltip": {
@@ -625,17 +617,6 @@ pages:
                                           "show": true
                                         },
                                         "type": "line"
-                                    },
-                                    {
-                                        "label": {
-                                          "show": true,
-                                          "rotate": 90,
-                                          "color": "#fff",
-                                          "shadowColor": "transparent",
-                                          "textBorderColor": "none"
-                                        },
-                                        "yAxisIndex": 1,
-                                        "type": "bar"
                                     }
                                 ]
                             }
@@ -647,6 +628,86 @@ pages:
                       functions:
                         - source: Month
                         - source: Page views
+        - span: 6
+          properties:
+            margin-top: 30px
+            margin-bottom: 30px
+          components:
+            - displayer:
+                component: echarts
+                echarts:
+                    option: >-
+                            {
+                                "title": {
+                                  "text": "Unique visitors per month",
+                                  "textStyle": {
+                                    "color": "#00185e"
+                                  }
+                                },
+                                "grid": {
+                                  "top": 70
+                                },
+                                "color": ["#00185e", "#000e9c", "#0050d5", "#147de8", "#4ab0f5", "#73e3ff", "#7f7f7f", "#bfbfbf"],
+                                "legend": {
+                                  "bottom": 0
+                                },
+                                "xAxis": [{
+                                  "axisTick": {
+                                    "alignWithLabel": true
+                                  },
+                                  "axisLabel": {
+                                    "interval": 0,
+                                    "rotate": 50,
+                                    "margin": 12
+                                  },
+                                  "axisPointer": {
+                                    "type": "shadow"
+                                  }
+                                }],
+                                "yAxis": [
+                                  {
+                                    "type": "value",
+                                    "name": "Unique visitors"
+                                  }
+                                ],
+                                "tooltip": {
+                                  "trigger": "axis",
+                                  "axisPointer": {
+                                    "crossStyle": {
+                                      "color": "#999"
+                                    }
+                                  }
+                                },
+                                "toolbox": {
+                                    "feature": {
+                                        "dataZoom": {},
+                                        "magicType": {
+                                            "type": ["line", "bar"]
+                                        },
+                                        "restore": {}
+                                    }
+                                },
+                                "series": [
+                                    {
+                                        "label": {
+                                          "show": true,
+                                          "rotate": 90,
+                                          "color": "#fff",
+                                          "shadowColor": "transparent",
+                                          "textBorderColor": "none"
+                                        },
+                                        "yAxisIndex": 0,
+                                        "type": "bar"
+                                    }
+                                ]
+                            }
+                lookup:
+                  uuid: documentation_views
+                  group:
+                    - columnGroup:
+                        source: Month
+                      functions:
+                        - source: Month
                         - source: Unique visitors
   - name: Requests
     properties:
@@ -713,7 +774,7 @@ pages:
               - displayer:
                   type: METRIC
                   general: 
-                    title: Features requested (this month)
+                    title: Features asked (this month)
                   columns:
                       - id: ODS issue
                         pattern: "#"
@@ -764,7 +825,7 @@ pages:
                                 "yAxis": [
                                   {
                                     "type": "value",
-                                    "name": "Number of requests"
+                                    "name": "Number of \nrequests"
                                   }
                                 ],
                                 "tooltip": {
@@ -1179,7 +1240,7 @@ pages:
                                 "yAxis": [
                                   {
                                     "type": "value",
-                                    "name": "Number of prodded projects"
+                                    "name": "Number of\nprodded projects"
                                   }
                                 ],
                                 "tooltip": {
