@@ -12,6 +12,6 @@ dashbuilder = {
 	// Set this as true to always hide the nav bar
 	hideNavBar: true
 */
-  dashboards: ["hello-dashboard.dash.yaml"],
+  dashboards: ["ods.dash.yaml"],
   hideNavBar: true
 };
