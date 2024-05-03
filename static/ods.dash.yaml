@@ -374,7 +374,10 @@ pages:
                                                 }
                                             ]
                                         },
-                                        "type": "line"
+                                        "type": "line",
+                                        "axisLabel": {
+                                          "internal": "auto"
+                                        }
                                     }
                                 ],
                                 "areaStyle": {
@@ -508,15 +511,14 @@ pages:
                       pattern: "#"
                 lookup:
                     uuid: documentation_views
-                    filter:
-                      - column: Month
-                        function: EQUALS_TO
-                        args:
-                          - "04/24"
+                    rowCount: 1
+                    sort:
+                      - order: DESCENDING
+                        column: Month
                     group:
                     - functions:
                         - source: Page views
-                          function: SUM
+                        - source: Month
         - span: 4
           properties:
             font-size: xx-large
@@ -689,7 +691,6 @@ pages:
                                     {
                                         "label": {
                                           "show": true,
-                                          "rotate": 90,
                                           "color": "#fff",
                                           "shadowColor": "transparent",
                                           "textBorderColor": "none"
@@ -1159,14 +1160,14 @@ pages:
                         pattern: "#"
                   lookup:
                       uuid: adoption_prods
-                      filter:
-                        - column: Month
-                          function: EQUALS_TO
-                          args:
-                            - "04/24"
+                      rowCount: 1
+                      sort:
+                        - order: DESCENDING
+                          column: Month
                       group:
                       - functions:
                           - source: Aggregated
+                          - source: Month
           - span: 4
             properties:
               font-size: xx-large
