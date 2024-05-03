@@ -1,25 +1,1288 @@
 global:
-    mode: dark
+  settings:
+    general:
+      title: OVHcloud Design System - Stats
+    chart:
+      resizable: true
+      grid:
+        x: false
+    html:
+      html: >-
+        <div id="${this}" class="card-pf card-pf-aggregate-status" style="font-family: 'Source Sans Pro'; border: solid 1px #b3b3b3; box-shadow:none; width: 85%; margin: 0 10px; padding-bottom: 10px; border-radius: 8px; color: #00185e">
+          <h2 style="font-weight: 700; font-size: x-large;" id="${this}Title"><em id="${this}Icon" class=""></em> ${title}</h2>
+          <h3 style="font-weight: 700; font-size: xxx-large; color: #4d5592" id="${this}Value">${value} <span id="${this}Suffix" class=""></span></h3>
+        </div>
 datasets:
-    - uuid: hello
-      content: >-
-          [
-              ["John", 33],
-              ["Mark", 42],
-              ["Mary", 29]
-          ]
+  - uuid: component_identified_count
+    content: >-
+      [
+        [50]
+      ]
+    columns:
+      - id: Amount
+        type: NUMBER
+  - uuid: component_created_count
+    content: >-
+      [
+        [46]
+      ]
+    columns:
+      - id: Amount
+        type: NUMBER
+  - uuid: libraries_count
+    content: >-
+      [
+        [1]
+      ]
+    columns:
+      - id: Amount
+        type: NUMBER
+  - uuid: component_count
+    content: >-
+     [
+        ["09/21", 0, 0, 0],
+        ["10/21", 3, 0, 3],
+        ["11/21", 8, 0, 11],
+        ["12/21", 3, 0, 14],
+        ["01/22", 0, 0, 14],
+        ["02/22", 0, 0, 14],
+        ["03/22", 0, 0, 14],
+        ["04/22", 1, 1, 15],
+        ["05/22", 0, 0, 15],
+        ["06/22", 3, 0, 18],
+        ["07/22", 4, 0, 22],
+        ["08/22", 0, 1, 22],
+        ["09/22", 3, 0, 25],
+        ["10/22", 0, 0, 25],
+        ["11/22", 0, 0, 25],
+        ["12/22", 1, 0, 26],
+        ["01/22", 0, 0, 26],
+        ["02/22", 0, 0, 26],
+        ["03/22", 0, 0, 26],
+        ["04/23", 3, 1, 29],
+        ["05/23", 1, 0, 30],
+        ["06/23", 4, 1, 34],
+        ["07/23", 4, 1, 38],
+        ["08/23", 2, 0, 40],
+        ["09/23", 2, 0, 42],
+        ["10/23", 2, 0, 44],
+        ["11/23", 1, 0, 45],
+        ["12/23", 0, 0, 45],
+        ["01/24", 0, 0, 45],
+        ["02/24", 0, 0, 45],
+        ["03/24", 0, 3, 45],
+        ["04/24", 1, 11, 46],
+      ]
+    columns:
+      - id: Quarter
+        type: LABEL
+      - id: Components created
+        type: NUMBER
+      - id: Components updated
+        type: NUMBER
+      - id: Sum of distinct components
+  - uuid: documentation_views
+    content: >-
+      [
+        ["03/24", 36, 1628],
+        ["04/24", 78, 2036],
+      ]
+    columns:
+      - id: Month
+        type: LABEL
+      - id: Unique visitors
+      - id: Page views
+  - uuid: run
+    content: >-
+      [
+        ["03/23", 1, 0, 0, 1, 0, 2],
+        ["04/23", 0, 0, 0, 0, 0, 0],
+        ["05/23", 0, 0, 1, 1, 0, 2],
+        ["06/23", 0, 1, 1, 1, 0, 3],
+        ["07/23", 0, 1, 3, 0, 0, 4],
+        ["08/23", 1, 0, 2, 1, 0, 4],
+        ["09/23", 2, 0, 2, 1, 0, 5],
+        ["10/23", 5, 1, 1, 0, 1, 8],
+        ["11/23", 21, 3, 3, 2, 1, 30],
+        ["12/23", 7, 5, 2, 1, 1, 16],
+        ["01/24", 10, 4, 6, 4, 1, 25],
+        ["02/24", 3, 0, 1, 1, 0, 5],
+        ["03/24", 3, 2, 0, 1, 0, 6],
+        ["04/24", 3, 2, 0, 1, 0, 6],
+      ]
+    columns:
+      - id: Month
+        type: LABEL
+      - id: ODS issue
+      - id: ODS feature
+      - id: Documentation
+      - id: Troubleshoot
+      - id: Design
+      - id: Total
+  - uuid: run_types
+    content: >-
+      [
+        ["ODS issues", 53],
+        ["ODS features", 17],
+        ["Documentation", 22],
+        ["Troubleshoot", 14],
+        ["Design", 4],
+      ]
+    columns:
+      - id: Name
+        type: LABEL
+      - id: Count
+  - uuid: run_issues
+    content: >-
+      [
+        ["10/21", 0, 0, 0],
+        ["11/21", -2, 0, -2],
+        ["12/21", 0, 1, -1],
+        ["01/22", -3, 1, -3],
+        ["02/22", -3, 3, -3],
+        ["03/22", -1, 1, -3],
+        ["04/22", -3, 1, -5],
+        ["05/22", 0, 0, -5],
+        ["06/22", 0, 0, -5],
+        ["07/22", 0, 1, -4],
+        ["08/22", 0, 1, -3],
+        ["09/22", -3, 2, -4],
+        ["10/22", 0, 1, -3],
+        ["11/22", -2, 1, -4],
+        ["12/22", -4, 2, -6],
+        ["01/22", 0, 1, -5],
+        ["02/22", 0, 0, -5],
+        ["03/22", -1, 0, -6],
+        ["04/23", -1, 1, -6],
+        ["05/23", -1, 1, -6],
+        ["06/23", 0, 4, -2],
+        ["07/23", 0, 1, -1],
+        ["08/23", -1, 0, -2],
+        ["09/23", -3, 0, -5],
+        ["10/23", -12, 0, -17],
+        ["11/23", -15, 13, -19],
+        ["12/23", -1, 2, -18],
+        ["01/24", -5, 8, -15],
+        ["02/24", -5, 5, -15],
+        ["03/24", -7, 4, -18],
+        ["04/24", -3, 0, -21]
+      ]
+    columns:
+      - id: Month
+        type: LABEL
+      - id: Opened issues
+        type: NUMBER
+      - id: Closed issues
+        type: NUMBER
+      - id: Issue delta
+        type: NUMBER
+  - uuid: adoption_prods
+    content: >-
+      [
+        ["10/23", 1, 0, 0, 1],
+        ["11/23", 0, 1, 1, 3],
+        ["12/23", 0, 5, 0, 8],
+        ["01/24", 1, 0, 0, 9],
+        ["02/24", 0, 0, 0, 9],
+        ["03/24", 0, 5, 0, 14],
+        ["04/24", 0, 1, 0, 15],
+      ]
+    columns:
+      - id: Month
+        type: LABEL
+      - id: Design
+        type: NUMBER
+      - id: Tech - External
+        type: NUMBER
+      - id: Tech - Internal
+        type: NUMBER
+      - id: Aggregated
+        type: NUMBER
+  - uuid: adoption_prod_types
+    content: >-
+      [
+        ["Tech - For external UIs", 12],
+        ["Tech - For internal UIs", 1],
+        ["Design", 2]
+      ]
+    columns:
+      - id: Name
+        type: LABEL
+      - id: Count
+        type: NUMBER
+  - uuid: adoption_coverage
+    content: >-
+      [
+        ["Expected", 81],
+        ["Current", 60]
+      ]
+    columns:
+      - id: Name
+        type: LABEL
+      - id: Count
+        type: NUMBER
 pages:
-    - properties:
-        margin: 10px
-      components:
-          - html: "<h1 style='margin-bottom: 20px'>Person by Age</h1>"
-          - settings:
-                type: BARCHART
+  - name: index
+    components:
+      - properties:
+          background-color: "#000E9C"
+          opacity: 1
+          color: white
+          padding: 30px 20px
+          font-size: xx-large
+          font-weight: bolder
+          font-family: 'Source Sans Pro'
+          text-align: center
+        html: >-
+          OVHcloud Design System - Stats
+      - type: TABS
+        properties:
+          width: 100%
+          navGroupId: MainGroup
+          targetDivId: all_div
+      - div: all_div
+  - name: Components
+    properties:
+      margin: 30px
+    rows:
+    - columns:
+        - components:
+            - html: >-
+                <p style="font-family: 'Source Sans Pro'; font-weight: 600; color: #00185e">
+                  ODS UI Components & Libraries <hr />
+                </p>
+              properties:
+                font-size: xx-large
+                margin-bottom: 30px
+    - columns:   
+        - span: 4
+          properties:
+            font-size: xx-large
+            margin-bottom: 30px
+          components:
+            - displayer:
+                type: METRIC
+                general: 
+                  title: Identified components
+                columns:
+                    - id: Count
+                      pattern: "#"
                 lookup:
-                    uuid: hello
+                    uuid: component_identified_count
                     group:
-                        - columnGroup:
-                              source: Column 0
-                          functions:
-                              - source: Column 0
-                              - source: Column 1
+                    - functions:
+                        - source: Count
+                          function: SUM
+        - span: 4
+          components:
+            - displayer:
+                type: METRIC
+                general: 
+                  title: Prodded components
+                columns:
+                    - id: Components created
+                      pattern: "#"
+                lookup:
+                    uuid: component_count
+                    group:
+                    - functions:
+                        - source: Components created
+                          function: SUM
+        - span: 4
+          components:
+            - displayer:
+                type: METRIC
+                general: 
+                  title: Updated components
+                columns:
+                    - id: Components updated
+                      pattern: "#"
+                lookup:
+                    uuid: component_count
+                    group:
+                    - functions:
+                        - source: Components updated
+                          function: SUM
+    - columns:
+        - properties:
+            margin-top: 30px
+          components:
+            - displayer:
+                  component: echarts
+                  echarts:
+                      option: >-
+                              {
+                                  "title": {
+                                    "text": "UI components production advancement",
+                                    "textStyle": {
+                                      "color": "#00185e"
+                                    }
+                                  },
+                                  "grid": {
+                                    "top": 70
+                                  },
+                                  "color": ["#00185e", "#000e9c", "#0050d5", "#147de8", "#4ab0f5", "#73e3ff", "#7f7f7f", "#bfbfbf"],
+                                  "legend": {
+                                    "bottom": 0
+                                  },
+                                  "xAxis": [{
+                                    "axisTick": {
+                                      "alignWithLabel": true
+                                    },
+                                    "axisLabel": {
+                                      "interval": 0,
+                                      "rotate": 50,
+                                      "margin": 12
+                                    }
+                                  }],
+                                "yAxis": [
+                                  {
+                                    "type": "value",
+                                    "name": "Number of components"
+                                  }
+                                ],
+                                  "toolbox": {
+                                      "feature": {
+                                          "dataZoom": {},
+                                          "magicType": {
+                                              "type": ["line", "bar"]
+                                          },
+                                          "restore": {}
+                                      }
+                                  },
+                                  "series": [
+                                      {
+                                          "label": {
+                                            "show": true
+                                          },
+                                          "areaStyle": {
+                                            "color": "#def8ff"
+                                          },
+                                          "markLine": {
+                                              "lineStyle": {
+                                                "color": "#ed743e",
+                                                "type": "solid",
+                                                "width": 2
+                                              },
+                                              "label": {
+                                                "show": true,
+                                                "formatter": "Identified\ncomponents"
+                                              },
+                                              "data": [
+                                                  { 
+                                                    "yAxis": 50
+                                                  }
+                                              ]
+                                          },
+                                          "type": "line"
+                                      }
+                                  ],
+                                  "areaStyle": {
+                                    "origin": "start"
+                                  }
+                              }
+                  lookup:
+                    uuid: component_count
+                    group:
+                      - columnGroup:
+                          source: Quarter
+                        functions:
+                          - source: Quarter
+                          - source: Sum of distinct components
+    - columns:
+        - properties:
+            margin-top: 30px
+          components:
+            - displayer:
+                component: echarts
+                echarts:
+                    option: >-
+                            {
+                                "title": {
+                                  "text": "Components prodded per month",
+                                  "textStyle": {
+                                    "color": "#00185e"
+                                  }
+                                },
+                                "grid": {
+                                  "top": 70
+                                },
+                                "color": ["#00185e", "#000e9c", "#0050d5", "#147de8", "#4ab0f5", "#73e3ff", "#7f7f7f", "#bfbfbf"],
+                                "legend": {
+                                  "bottom": 0
+                                },
+                                "xAxis": [{
+                                  "axisTick": {
+                                    "alignWithLabel": true
+                                  },
+                                  "axisLabel": {
+                                    "interval": 0,
+                                    "rotate": 50,
+                                    "margin": 12
+                                  },
+                                  "axisPointer": {
+                                    "type": "shadow"
+                                  }
+                                }],
+                                "yAxis": [
+                                  {
+                                    "type": "value",
+                                    "name": "Number of components"
+                                  }
+                                ],
+                                "tooltip": {
+                                  "trigger": "axis",
+                                  "axisPointer": {
+                                    "crossStyle": {
+                                      "color": "#999"
+                                    }
+                                  }
+                                },
+                                "toolbox": {
+                                    "feature": {
+                                        "dataZoom": {},
+                                        "magicType": {
+                                            "type": ["line", "bar"]
+                                        },
+                                        "restore": {}
+                                    }
+                                },
+                                "series": [
+                                    {
+                                        "label": {
+                                          "show": true,
+                                          "color": "#fff",
+                                          "shadowColor": "transparent",
+                                          "textBorderColor": "none"
+                                        },
+                                        "stack": "components",
+                                        "type": "bar"
+                                    },
+                                    {
+                                        "label": {
+                                          "show": true,
+                                          "color": "#fff",
+                                          "shadowColor": "transparent",
+                                          "textBorderColor": "none"
+                                        },
+                                        "stack": "components",
+                                        "type": "bar"
+                                    }
+                                ]
+                            }
+                lookup:
+                  uuid: component_count
+                  group:
+                    - columnGroup:
+                        source: Quarter
+                      functions:
+                        - source: Quarter
+                        - source: Components created
+                        - source: Components updated
+  - name: Documentation
+    properties:
+      margin: 30px
+    rows:
+    - columns:
+      - components:
+          - html: >-
+              <p style="font-family: 'Source Sans Pro'; font-weight: 600; color: #00185e">
+                ODS Documentation <hr />
+              </p>
+            properties:
+              font-size: xx-large
+              margin-bottom: 30px
+    - columns:   
+        - span: 4
+          properties:
+            font-size: xx-large
+            margin-bottom: 30px
+          components:
+            - displayer:
+                type: METRIC
+                general: 
+                  title: This month page views
+                columns:
+                    - id: Page views
+                      pattern: "#"
+                lookup:
+                    uuid: documentation_views
+                    filter:
+                      - column: Month
+                        function: EQUALS_TO
+                        args:
+                          - "04/24"
+                    group:
+                    - functions:
+                        - source: Page views
+                          function: SUM
+        - span: 4
+          properties:
+            font-size: xx-large
+            margin-bottom: 30px
+          components:
+            - displayer:
+                type: METRIC
+                general: 
+                  title: Page views - Avg/month
+                columns:
+                    - id: Page views
+                      pattern: "#"
+                lookup:
+                    uuid: documentation_views
+                    group:
+                    - functions:
+                        - source: Page views
+                          function: AVERAGE
+        - span: 4
+          components:
+            - displayer:
+                type: METRIC
+                general: 
+                  title: Unique visitors - Avg/month
+                columns:
+                    - id: Unique visitors
+                      pattern: "#"
+                lookup:
+                    uuid: documentation_views
+                    group:
+                    - functions:
+                        - source: Unique visitors
+                          function: AVERAGE
+        - span: 12
+          properties:
+            margin-top: 30px
+            margin-bottom: 30px
+          components:
+            - displayer:
+                component: echarts
+                echarts:
+                    option: >-
+                            {
+                                "title": {
+                                  "text": "Page views & unique visitors per month",
+                                  "textStyle": {
+                                    "color": "#00185e"
+                                  }
+                                },
+                                "grid": {
+                                  "top": 70
+                                },
+                                "color": ["#00185e", "#000e9c", "#0050d5", "#147de8", "#4ab0f5", "#73e3ff", "#7f7f7f", "#bfbfbf"],
+                                "legend": {
+                                  "bottom": 0
+                                },
+                                "xAxis": [{
+                                  "axisTick": {
+                                    "alignWithLabel": true
+                                  },
+                                  "axisLabel": {
+                                    "interval": 0,
+                                    "rotate": 50,
+                                    "margin": 12
+                                  },
+                                  "axisPointer": {
+                                    "type": "shadow"
+                                  }
+                                }],
+                                "yAxis": [
+                                  {
+                                    "type": "value",
+                                    "name": "Page views"
+                                  },
+                                  {
+                                    "type": "value",
+                                    "name": "Unique visitors",
+                                    "max": 250
+                                  }
+                                ],
+                                "tooltip": {
+                                  "trigger": "axis",
+                                  "axisPointer": {
+                                    "crossStyle": {
+                                      "color": "#999"
+                                    }
+                                  }
+                                },
+                                "toolbox": {
+                                    "feature": {
+                                        "dataZoom": {},
+                                        "magicType": {
+                                            "type": ["line", "bar"]
+                                        },
+                                        "restore": {}
+                                    }
+                                },
+                                "series": [
+                                    {
+                                        "label": {
+                                          "show": true
+                                        },
+                                        "type": "line"
+                                    },
+                                    {
+                                        "label": {
+                                          "show": true,
+                                          "rotate": 90,
+                                          "color": "#fff",
+                                          "shadowColor": "transparent",
+                                          "textBorderColor": "none"
+                                        },
+                                        "yAxisIndex": 1,
+                                        "type": "bar"
+                                    }
+                                ]
+                            }
+                lookup:
+                  uuid: documentation_views
+                  group:
+                    - columnGroup:
+                        source: Month
+                      functions:
+                        - source: Month
+                        - source: Page views
+                        - source: Unique visitors
+  - name: Requests
+    properties:
+      margin: 30px
+    rows:
+      - columns:
+          - span: 12
+            components:
+              - html: >-
+                  <p style="font-family: 'Source Sans Pro'; font-weight: 600; color: #00185e">
+                    Incoming requests<hr />
+                  </p>
+                properties:
+                  font-size: xx-large
+                  margin-bottom: 30px
+          - span: 4
+            properties:
+              font-size: xx-large
+              margin-bottom: 30px
+            components:
+              - displayer:
+                  type: METRIC
+                  accumulate: true
+                  general: 
+                    title: Requests (this month)
+                  columns:
+                      - id: Total
+                        pattern: "#"
+                  lookup:
+                      uuid: run
+                      filter:
+                        - column: Month
+                          function: EQUALS_TO
+                          args:
+                            - "04/24"
+                      group:
+                      - functions:
+                          - source: Total
+          - span: 4
+            properties:
+              font-size: xx-large
+              margin-bottom: 30px
+            components:
+              - displayer:
+                  type: METRIC
+                  general: 
+                    title: Issues found (this month)
+                  columns:
+                      - id: ODS issue
+                        pattern: "#"
+                  lookup:
+                      uuid: run
+                      filter:
+                        - column: Month
+                          function: EQUALS_TO
+                          args:
+                            - "04/24"
+                      group:
+                      - functions:
+                          - source: ODS issue
+                            function: SUM
+          - span: 4
+            components:
+              - displayer:
+                  type: METRIC
+                  general: 
+                    title: Features requested (this month)
+                  columns:
+                      - id: ODS issue
+                        pattern: "#"
+                  lookup:
+                      uuid: run
+                      filter:
+                        - column: Month
+                          function: EQUALS_TO
+                          args:
+                            - "04/24"
+                      group:
+                      - functions:
+                          - source: ODS issue
+                            function: SUM
+          - span: 7
+            components:
+            - displayer:
+                component: echarts
+                echarts:
+                    option: >-
+                            {
+                                "title": {
+                                  "text": "Number of monthly requests",
+                                  "textStyle": {
+                                    "color": "#00185e"
+                                  }
+                                },
+                                "grid": {
+                                  "top": 70
+                                },
+                                "color": ["#00185e", "#000e9c", "#0050d5", "#147de8", "#4ab0f5", "#73e3ff", "#7f7f7f", "#bfbfbf"],
+                                "legend": {
+                                  "bottom": 0
+                                },
+                                "xAxis": [{
+                                  "axisTick": {
+                                    "alignWithLabel": true
+                                  },
+                                  "axisLabel": {
+                                    "interval": 0,
+                                    "rotate": 50,
+                                    "margin": 12
+                                  },
+                                  "axisPointer": {
+                                    "type": "shadow"
+                                  }
+                                }],
+                                "yAxis": [
+                                  {
+                                    "type": "value",
+                                    "name": "Number of requests"
+                                  }
+                                ],
+                                "tooltip": {
+                                  "trigger": "axis",
+                                  "axisPointer": {
+                                    "crossStyle": {
+                                      "color": "#999"
+                                    }
+                                  }
+                                },
+                                "toolbox": {
+                                    "feature": {
+                                        "dataZoom": {},
+                                        "magicType": {
+                                            "type": ["line", "bar"]
+                                        },
+                                        "restore": {}
+                                    }
+                                },
+                                "series": [
+                                    {
+                                        "stack": "Run",
+                                        "type": "bar"
+                                    },
+                                    {
+                                        "stack": "Run",
+                                        "type": "bar"
+                                    },
+                                    {
+                                        "stack": "Run",
+                                        "type": "bar"
+                                    },
+                                    {
+                                        "stack": "Run",
+                                        "type": "bar"
+                                    },
+                                    {
+                                        "stack": "Run",
+                                        "type": "bar"
+                                    }
+                                ]
+                            }
+                lookup:
+                  uuid: run
+                  group:
+                    - columnGroup:
+                        source: Month
+                      functions:
+                        - source: Month
+                        - source: ODS issue
+                        - source: ODS feature
+                        - source: Documentation
+                        - source: Troubleshoot
+                        - source: Design
+          - span: 4
+            components:
+            - displayer:
+                component: echarts
+                echarts:
+                    option: >-
+                            {
+                                "title": {
+                                  "text": "Request types",
+                                  "textStyle": {
+                                    "color": "#00185e"
+                                  }
+                                },
+                                "grid": {
+                                  "top": 70,
+                                  "bottom": 0
+                                },
+                                "color": ["#00185e", "#000e9c", "#0050d5", "#147de8", "#4ab0f5", "#73e3ff", "#7f7f7f", "#bfbfbf"],
+                                "tooltip": {
+                                  "trigger": "item"
+                                },
+                                "toolbox": {
+                                    "feature": {
+                                        "dataZoom": {},
+                                        "restore": {}
+                                    }
+                                },
+                                "series": [
+                                    {       
+                                        "top": 30,     
+                                        "label": {
+                                          "formatter": "{b} ({d}%)",
+                                          "overflow": "break"
+                                        },
+                                        "type": "pie"
+                                    }
+                                ]
+                            }
+                lookup:
+                  uuid: run_types
+                  group:
+                    - columnGroup:
+                        source: Name
+                      functions:
+                        - source: Name
+                        - source: Count
+          - span: 12
+            components:
+              - html: >-
+                  <fieldset>
+                    <legend style="font-family: 'Source Sans Pro'; font-weight: 600; color: #00185e; font-size: 20px">
+                      Legend
+                    </legend>
+                    <ul>
+                      <li>
+                        <strong>ODS Issue :</strong> A request to address a specific problem or error found within an ODS component.
+                      </li>
+                      <li>
+                        <strong>ODS Feature :</strong> A request to add new functionality or enhancements to an ODS component to improve its capabilities or performance.
+                      </li>
+                      <li>
+                        <strong>Documentation :</strong> A request that has been already answered in ODS documentation.
+                      </li>
+                      <li>
+                        <strong>Troubleshoot :</strong> A request that has been troubleshooted with ODS team directly.
+                      </li>
+                      <li>
+                        <strong>Design :</strong> A request that has been handled/answered by Design team.
+                      </li>
+                    </ul>
+                  </fieldset>
+  - name: Run
+    properties:
+      margin: 30px
+    rows:
+    - columns:
+      - span: 12
+        components:
+          - html: >-
+              <p style="font-family: 'Source Sans Pro'; font-weight: 600; color: #00185e">
+                Run operations<hr />
+              </p>
+            properties:
+              font-size: xx-large
+              margin-bottom: 30px
+      - span: 4
+        properties:
+          font-size: xx-large
+          margin-bottom: 30px
+        components:
+          - displayer:
+              type: METRIC
+              accumulate: true
+              general: 
+                title: Requests (this month)
+              columns:
+                  - id: Total
+                    pattern: "#"
+              lookup:
+                  uuid: run
+                  filter:
+                    - column: Month
+                      function: EQUALS_TO
+                      args:
+                        - "03/24"
+                  group:
+                  - functions:
+                      - source: Total
+      - span: 4
+        properties:
+          font-size: xx-large
+          margin-bottom: 30px
+        components:
+          - displayer:
+              type: METRIC
+              general: 
+                title: Issues found (this month)
+              columns:
+                  - id: ODS issue
+                    pattern: "#"
+              lookup:
+                  uuid: run
+                  filter:
+                    - column: Month
+                      function: EQUALS_TO
+                      args:
+                        - "03/24"
+                  group:
+                  - functions:
+                      - source: ODS issue
+                        function: SUM
+      - span: 4
+        components:
+          - displayer:
+              type: METRIC
+              general: 
+                title: Features requested (this month)
+              columns:
+                  - id: ODS feature
+                    pattern: "#"
+              lookup:
+                  uuid: run
+                  filter:
+                    - column: Month
+                      function: EQUALS_TO
+                      args:
+                        - "03/24"
+                  group:
+                  - functions:
+                      - source: ODS feature
+                        function: SUM
+      - properties:
+          margin-top: 30px
+        components:
+          - displayer:
+              component: echarts
+              echarts:
+                  option: >-
+                          {
+                              "title": {
+                                "text": "Issues by month",
+                                "textStyle": {
+                                  "color": "#00185e"
+                                }
+                              },
+                              "grid": {
+                                "top": 70
+                              },
+                              "color": ["#bde475", "#f4a17d", "#FCCD9F"],
+                              "legend": {
+                                "bottom": 0
+                              },
+                              "xAxis": [{
+                                "axisTick": {
+                                  "alignWithLabel": true
+                                },
+                                "axisLabel": {
+                                  "interval": 0,
+                                  "rotate": 50,
+                                  "margin": 12
+                                },
+                                "axisPointer": {
+                                  "type": "shadow"
+                                }
+                              }],
+                              "yAxis": [
+                                {
+                                  "type": "value",
+                                  "name": "Issues"
+                                }
+                              ],
+                              "tooltip": {
+                                "trigger": "axis",
+                                "axisPointer": {
+                                  "crossStyle": {
+                                    "color": "#999"
+                                  }
+                                }
+                              },
+                              "toolbox": {
+                                  "feature": {
+                                      "dataZoom": {},
+                                      "magicType": {
+                                          "type": ["line", "bar"]
+                                      },
+                                      "restore": {}
+                                  }
+                              },
+                              "series": [
+                                  {
+                                      "label": {
+                                        "show": true,
+                                        "color": "#268403",
+                                        "textBorderWidth": 0,
+                                        "position": "top"
+                                      },
+                                      "type": "bar"
+                                  },
+                                  {
+                                      "label": {
+                                        "show": true,
+                                        "color": "#C11B1B",
+                                        "textBorderWidth": 0,
+                                        "position": "bottom"
+                                      },
+                                      "type": "bar"
+                                  },
+                                  {
+                                      "areaStyle": {
+                                        "color": "#FFF8D6"
+                                      },
+                                      "z": 0,
+                                      "type": "line"
+                                  }
+                              ]
+                          }
+              lookup:
+                uuid: run_issues
+                group:
+                  - columnGroup:
+                      source: Month
+                    functions:
+                      - source: Month
+                      - source: Closed issues
+                      - source: Opened issues
+                      - source: Issue delta
+  - name: Adoption
+    properties:
+      margin: 30px
+    rows:
+      - columns:
+          - span: 12
+            components:
+              - html: >-
+                  <p style="font-family: 'Source Sans Pro'; font-weight: 600; color: #00185e">
+                    ODS' adoption<hr />
+                  </p>
+                properties:
+                  font-size: xx-large
+                  margin-bottom: 30px
+          - span: 4
+            properties:
+              font-size: xx-large
+              margin-bottom: 30px
+            components:
+              - displayer:
+                  type: METRIC
+                  accumulate: true
+                  general: 
+                    title: Number of prodded projects (with ODS)
+                  columns:
+                      - id: Aggregated
+                        pattern: "#"
+                  lookup:
+                      uuid: adoption_prods
+                      filter:
+                        - column: Month
+                          function: EQUALS_TO
+                          args:
+                            - "04/24"
+                      group:
+                      - functions:
+                          - source: Aggregated
+          - span: 4
+            properties:
+              font-size: xx-large
+              margin-bottom: 30px
+            components:
+              - displayer:
+                  type: METRIC
+                  general: 
+                    title: Expected component coverage in new productions
+                  columns:
+                      - id: Count
+                        pattern: "# %"
+                  lookup:
+                      uuid: adoption_coverage
+                      filter:
+                        - column: Name
+                          function: EQUALS_TO
+                          args:
+                            - "Expected"
+                      group:
+                      - functions:
+                          - source: Count
+          - span: 4
+            components:
+              - displayer:
+                  type: METRIC
+                  general: 
+                    title: Current component coverage in new productions
+                  columns:
+                      - id: ODS feature
+                        pattern: "#"
+                  lookup:
+                      uuid: run
+                      filter:
+                        - column: Month
+                          function: EQUALS_TO
+                          args:
+                            - "03/24"
+                      group:
+                      - functions:
+                          - source: ODS feature
+                            function: SUM
+          - span: 7
+            components:
+            - displayer:
+                component: echarts
+                echarts:
+                    option: >-
+                            {
+                                "title": {
+                                  "text": "Prodded projects with ODS (by month)",
+                                  "textStyle": {
+                                    "color": "#00185e"
+                                  }
+                                },
+                                "grid": {
+                                  "top": 70
+                                },
+                                "color": ["#00185e", "#000e9c", "#0050d5", "#147de8", "#4ab0f5", "#73e3ff", "#7f7f7f", "#bfbfbf"],
+                                "legend": {
+                                  "bottom": 0
+                                },
+                                "xAxis": [{
+                                  "axisTick": {
+                                    "alignWithLabel": true
+                                  },
+                                  "axisLabel": {
+                                    "interval": 0,
+                                    "rotate": 50,
+                                    "margin": 12
+                                  },
+                                  "axisPointer": {
+                                    "type": "shadow"
+                                  }
+                                }],
+                                "yAxis": [
+                                  {
+                                    "type": "value",
+                                    "name": "Number of prodded projects"
+                                  }
+                                ],
+                                "tooltip": {
+                                  "trigger": "axis",
+                                  "axisPointer": {
+                                    "crossStyle": {
+                                      "color": "#999"
+                                    }
+                                  }
+                                },
+                                "toolbox": {
+                                    "feature": {
+                                        "dataZoom": {},
+                                        "magicType": {
+                                            "type": ["line", "bar"]
+                                        },
+                                        "restore": {}
+                                    }
+                                },
+                                "series": [
+                                    {
+                                        "stack": "Run",
+                                        "type": "bar"
+                                    },
+                                    {
+                                        "stack": "Run",
+                                        "type": "bar"
+                                    },
+                                    {
+                                        "stack": "Run",
+                                        "type": "bar"
+                                    },
+                                    {
+                                        "type": "line",
+                                        "areaStyle": {
+                                          "color": "#def8ff"
+                                        },
+                                        "z": 0,
+                                        "type": "line"
+                                    }
+                                ]
+                            }
+                lookup:
+                  uuid: adoption_prods
+                  group:
+                    - columnGroup:
+                        source: Month
+                      functions:
+                        - source: Month
+                        - source: Tech - External
+                        - source: Tech - Internal
+                        - source: Design
+                        - source: Aggregated
+          - span: 4
+            components:
+            - displayer:
+                component: echarts
+                echarts:
+                    option: >-
+                            {
+                                "title": {
+                                  "text": "Types of ODS usage",
+                                  "textStyle": {
+                                    "color": "#00185e"
+                                  }
+                                },
+                                "grid": {
+                                  "top": 70,
+                                  "bottom": 0
+                                },
+                                "color": ["#00185e", "#000e9c", "#0050d5", "#147de8", "#4ab0f5", "#73e3ff", "#7f7f7f", "#bfbfbf"],
+                                "tooltip": {
+                                  "trigger": "item"
+                                },
+                                "toolbox": {
+                                    "feature": {
+                                        "dataZoom": {},
+                                        "restore": {}
+                                    }
+                                },
+                                "series": [
+                                    {       
+                                        "top": 30,     
+                                        "label": {
+                                          "formatter": "{b} ({d}%)",
+                                          "overflow": "break"
+                                        },
+                                        "type": "pie"
+                                    }
+                                ]
+                            }
+                lookup:
+                  uuid: adoption_prod_types
+                  group:
+                    - columnGroup:
+                        source: Name
+                      functions:
+                        - source: Name
+                        - source: Count
+navTree:
+  root_items:
+    - type: GROUP
+      id: MainGroup
+      children:
+        - page: Components
+        - page: Documentation
+        - page: Requests
+        - page: Run
+        - page: Adoption
+        - page: Operational
+        - page: Impacts
