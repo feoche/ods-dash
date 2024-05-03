@@ -213,8 +213,8 @@ datasets:
   - uuid: adoption_coverage
     content: >-
       [
-        ["Expected", 81],
-        ["Current", 60]
+        ["Expected", 0.81],
+        ["Current", 0.60]
       ]
     columns:
       - id: Name
@@ -1125,19 +1125,18 @@ pages:
                   general: 
                     title: Current component coverage in new productions
                   columns:
-                      - id: ODS feature
-                        pattern: "#"
+                      - id: Count
+                        pattern: "# %"
                   lookup:
-                      uuid: run
+                      uuid: adoption_coverage
                       filter:
-                        - column: Month
+                        - column: Name
                           function: EQUALS_TO
                           args:
-                            - "03/24"
+                            - "Current"
                       group:
                       - functions:
-                          - source: ODS feature
-                            function: SUM
+                          - source: Count
           - span: 7
             components:
             - displayer:
