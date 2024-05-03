@@ -40,38 +40,38 @@ datasets:
   - uuid: component_count
     content: >-
      [
-        ["09/21", 0, 0, 0],
-        ["10/21", 3, 0, 3],
-        ["11/21", 8, 0, 11],
-        ["12/21", 3, 0, 14],
-        ["01/22", 0, 0, 14],
-        ["02/22", 0, 0, 14],
-        ["03/22", 0, 0, 14],
-        ["04/22", 1, 1, 15],
-        ["05/22", 0, 0, 15],
-        ["06/22", 3, 0, 18],
-        ["07/22", 4, 0, 22],
-        ["08/22", 0, 1, 22],
-        ["09/22", 3, 0, 25],
-        ["10/22", 0, 0, 25],
-        ["11/22", 0, 0, 25],
-        ["12/22", 1, 0, 26],
-        ["01/22", 0, 0, 26],
-        ["02/22", 0, 0, 26],
-        ["03/22", 0, 0, 26],
-        ["04/23", 3, 1, 29],
-        ["05/23", 1, 0, 30],
-        ["06/23", 4, 1, 34],
-        ["07/23", 4, 1, 38],
-        ["08/23", 2, 0, 40],
-        ["09/23", 2, 0, 42],
-        ["10/23", 2, 0, 44],
-        ["11/23", 1, 0, 45],
-        ["12/23", 0, 0, 45],
-        ["01/24", 0, 0, 45],
-        ["02/24", 0, 0, 45],
-        ["03/24", 0, 3, 45],
-        ["04/24", 1, 11, 46],
+        ["21/09", 0, 0, 0],
+        ["21/10", 3, 0, 3],
+        ["21/11", 8, 0, 11],
+        ["21/12", 3, 0, 14],
+        ["22/01", 0, 0, 14],
+        ["22/02", 0, 0, 14],
+        ["22/03", 0, 0, 14],
+        ["22/04", 1, 1, 15],
+        ["22/05", 0, 0, 15],
+        ["22/06", 3, 0, 18],
+        ["22/07", 4, 0, 22],
+        ["22/08", 0, 1, 22],
+        ["22/09", 3, 0, 25],
+        ["22/10", 0, 0, 25],
+        ["22/11", 0, 0, 25],
+        ["22/12", 1, 0, 26],
+        ["22/01", 0, 0, 26],
+        ["22/02", 0, 0, 26],
+        ["22/03", 0, 0, 26],
+        ["23/04", 3, 1, 29],
+        ["23/05", 1, 0, 30],
+        ["23/06", 4, 1, 34],
+        ["23/07", 4, 1, 38],
+        ["23/08", 2, 0, 40],
+        ["23/09", 2, 0, 42],
+        ["23/10", 2, 0, 44],
+        ["23/11", 1, 0, 45],
+        ["23/12", 0, 0, 45],
+        ["24/01", 0, 0, 45],
+        ["24/02", 0, 0, 45],
+        ["24/03", 0, 3, 45],
+        ["24/04", 1, 11, 46],
       ]
     columns:
       - id: Quarter
@@ -84,8 +84,8 @@ datasets:
   - uuid: documentation_views
     content: >-
       [
-        ["03/24", 36, 1628],
-        ["04/24", 78, 2036],
+        ["24/03", 36, 1628],
+        ["24/04", 78, 2036],
       ]
     columns:
       - id: Month
@@ -95,20 +95,20 @@ datasets:
   - uuid: run
     content: >-
       [
-        ["03/23", 1, 0, 0, 1, 0, 2],
-        ["04/23", 0, 0, 0, 0, 0, 0],
-        ["05/23", 0, 0, 1, 1, 0, 2],
-        ["06/23", 0, 1, 1, 1, 0, 3],
-        ["07/23", 0, 1, 3, 0, 0, 4],
-        ["08/23", 1, 0, 2, 1, 0, 4],
-        ["09/23", 2, 0, 2, 1, 0, 5],
-        ["10/23", 5, 1, 1, 0, 1, 8],
-        ["11/23", 21, 3, 3, 2, 1, 30],
-        ["12/23", 7, 5, 2, 1, 1, 16],
-        ["01/24", 10, 4, 6, 4, 1, 25],
-        ["02/24", 3, 0, 1, 1, 0, 5],
-        ["03/24", 3, 2, 0, 1, 0, 6],
-        ["04/24", 3, 2, 0, 1, 0, 6],
+        ["23/03", 1, 0, 0, 1, 0, 2],
+        ["23/04", 0, 0, 0, 0, 0, 0],
+        ["23/05", 0, 0, 1, 1, 0, 2],
+        ["23/06", 0, 1, 1, 1, 0, 3],
+        ["23/07", 0, 1, 3, 0, 0, 4],
+        ["23/08", 1, 0, 2, 1, 0, 4],
+        ["23/09", 2, 0, 2, 1, 0, 5],
+        ["23/10", 5, 1, 1, 0, 1, 8],
+        ["23/11", 21, 3, 3, 2, 1, 30],
+        ["23/12", 7, 5, 2, 1, 1, 16],
+        ["24/01", 10, 4, 6, 4, 1, 25],
+        ["24/02", 3, 0, 1, 1, 0, 5],
+        ["24/03", 3, 2, 0, 1, 0, 6],
+        ["24/04", 3, 2, 0, 1, 0, 6],
       ]
     columns:
       - id: Month
@@ -135,37 +135,37 @@ datasets:
   - uuid: run_issues
     content: >-
       [
-        ["10/21", 0, 0, 0],
-        ["11/21", -2, 0, -2],
-        ["12/21", 0, 1, -1],
-        ["01/22", -3, 1, -3],
-        ["02/22", -3, 3, -3],
-        ["03/22", -1, 1, -3],
-        ["04/22", -3, 1, -5],
-        ["05/22", 0, 0, -5],
-        ["06/22", 0, 0, -5],
-        ["07/22", 0, 1, -4],
-        ["08/22", 0, 1, -3],
-        ["09/22", -3, 2, -4],
-        ["10/22", 0, 1, -3],
-        ["11/22", -2, 1, -4],
-        ["12/22", -4, 2, -6],
-        ["01/22", 0, 1, -5],
-        ["02/22", 0, 0, -5],
-        ["03/22", -1, 0, -6],
-        ["04/23", -1, 1, -6],
-        ["05/23", -1, 1, -6],
-        ["06/23", 0, 4, -2],
-        ["07/23", 0, 1, -1],
-        ["08/23", -1, 0, -2],
-        ["09/23", -3, 0, -5],
-        ["10/23", -12, 0, -17],
-        ["11/23", -15, 13, -19],
-        ["12/23", -1, 2, -18],
-        ["01/24", -5, 8, -15],
-        ["02/24", -5, 5, -15],
-        ["03/24", -7, 4, -18],
-        ["04/24", -3, 0, -21]
+        ["21/10", 0, 0, 0],
+        ["21/11", 2, 0, -2],
+        ["21/12", 0, 1, -1],
+        ["22/01", 3, 1, -3],
+        ["22/02", 3, 3, -3],
+        ["22/03", 1, 1, -3],
+        ["22/04", 3, 1, -5],
+        ["22/05", 0, 0, -5],
+        ["22/06", 0, 0, -5],
+        ["22/07", 0, 1, -4],
+        ["22/08", 0, 1, -3],
+        ["22/09", 3, 2, -4],
+        ["22/10", 0, 1, -3],
+        ["22/11", 2, 1, -4],
+        ["22/12", 4, 2, -6],
+        ["22/01", 0, 1, -5],
+        ["22/02", 0, 0, -5],
+        ["22/03", 1, 0, -6],
+        ["23/04", 1, 1, -6],
+        ["23/05", 1, 1, -6],
+        ["23/06", 0, 4, -2],
+        ["23/07", 0, 1, -1],
+        ["23/08", 1, 0, -2],
+        ["23/09", 3, 0, -5],
+        ["23/10", 12, 0, -17],
+        ["23/11", 15, 13, -19],
+        ["23/12", 1, 2, -18],
+        ["24/01", 5, 8, -15],
+        ["24/02", 5, 5, -15],
+        ["24/03", 7, 4, -18],
+        ["24/04", 3, 0, -21]
       ]
     columns:
       - id: Month
@@ -179,13 +179,13 @@ datasets:
   - uuid: adoption_prods
     content: >-
       [
-        ["10/23", 1, 0, 0, 1],
-        ["11/23", 0, 1, 1, 3],
-        ["12/23", 0, 5, 0, 8],
-        ["01/24", 1, 0, 0, 9],
-        ["02/24", 0, 0, 0, 9],
-        ["03/24", 0, 5, 0, 14],
-        ["04/24", 0, 1, 0, 15],
+        ["23/10", 1, 0, 0, 1],
+        ["23/11", 0, 1, 1, 3],
+        ["23/12", 0, 5, 0, 8],
+        ["24/01", 1, 0, 0, 9],
+        ["24/02", 0, 0, 0, 9],
+        ["24/03", 0, 7, 0, 16],
+        ["24/04", 0, 1, 0, 17],
       ]
     columns:
       - id: Month
@@ -229,12 +229,10 @@ pages:
           opacity: 1
           color: white
           padding: 30px 20px
-          font-size: xx-large
-          font-weight: bolder
-          font-family: 'Source Sans Pro'
           text-align: center
         html: >-
-          OVHcloud Design System - Stats
+          <h1 style="font-size: xx-large; font-weight: bolder; font-family: 'Source Sans Pro';">OVHcloud Design System - Stats</h1>
+          <em>Last updated: 02/05/24</em>
       - type: TABS
         properties:
           width: 100%
@@ -730,7 +728,6 @@ pages:
             components:
               - displayer:
                   type: METRIC
-                  accumulate: true
                   general: 
                     title: Requests (this month)
                   columns:
@@ -738,14 +735,14 @@ pages:
                         pattern: "#"
                   lookup:
                       uuid: run
-                      filter:
-                        - column: Month
-                          function: EQUALS_TO
-                          args:
-                            - "04/24"
+                      rowCount: 1
+                      sort:
+                        - order: DESCENDING
+                          column: Month
                       group:
                       - functions:
                           - source: Total
+                          - source: Month
           - span: 4
             properties:
               font-size: xx-large
@@ -760,15 +757,14 @@ pages:
                         pattern: "#"
                   lookup:
                       uuid: run
-                      filter:
-                        - column: Month
-                          function: EQUALS_TO
-                          args:
-                            - "04/24"
+                      rowCount: 1
+                      sort:
+                        - order: DESCENDING
+                          column: Month
                       group:
                       - functions:
                           - source: ODS issue
-                            function: SUM
+                          - source: Month
           - span: 4
             components:
               - displayer:
@@ -776,19 +772,18 @@ pages:
                   general: 
                     title: Features asked (this month)
                   columns:
-                      - id: ODS issue
+                      - id: ODS feature
                         pattern: "#"
                   lookup:
                       uuid: run
-                      filter:
-                        - column: Month
-                          function: EQUALS_TO
-                          args:
-                            - "04/24"
+                      rowCount: 1
+                      sort:
+                        - order: DESCENDING
+                          column: Month
                       group:
                       - functions:
-                          - source: ODS issue
-                            function: SUM
+                          - source: ODS feature
+                          - source: Month
           - span: 7
             components:
             - displayer:
@@ -972,22 +967,21 @@ pages:
         components:
           - displayer:
               type: METRIC
-              accumulate: true
               general: 
-                title: Requests (this month)
+                title: Opened issues (this month)
               columns:
-                  - id: Total
+                  - id: Opened issues
                     pattern: "#"
               lookup:
-                  uuid: run
-                  filter:
-                    - column: Month
-                      function: EQUALS_TO
-                      args:
-                        - "03/24"
+                  uuid: run_issues
+                  rowCount: 1
+                  sort:
+                    - order: DESCENDING
+                      column: Month
                   group:
                   - functions:
-                      - source: Total
+                      - source: Opened issues
+                      - source: Month
       - span: 4
         properties:
           font-size: xx-large
@@ -996,41 +990,39 @@ pages:
           - displayer:
               type: METRIC
               general: 
-                title: Issues found (this month)
+                title: Closed issues (this month)
               columns:
-                  - id: ODS issue
+                  - id: Closed issues
                     pattern: "#"
               lookup:
-                  uuid: run
-                  filter:
-                    - column: Month
-                      function: EQUALS_TO
-                      args:
-                        - "03/24"
+                  uuid: run_issues
+                  rowCount: 1
+                  sort:
+                    - order: DESCENDING
+                      column: Month
                   group:
                   - functions:
-                      - source: ODS issue
-                        function: SUM
+                      - source: Closed issues
+                      - source: Month
       - span: 4
         components:
           - displayer:
               type: METRIC
               general: 
-                title: Features requested (this month)
+                title: Current issue delta
               columns:
-                  - id: ODS feature
+                  - id: Issue delta
                     pattern: "#"
               lookup:
-                  uuid: run
-                  filter:
-                    - column: Month
-                      function: EQUALS_TO
-                      args:
-                        - "03/24"
+                  uuid: run_issues
+                  rowCount: 1
+                  sort:
+                    - order: DESCENDING
+                      column: Month
                   group:
                   - functions:
-                      - source: ODS feature
-                        function: SUM
+                      - source: Issue delta
+                      - source: Month
       - properties:
           margin-top: 30px
         components:
@@ -1048,7 +1040,7 @@ pages:
                               "grid": {
                                 "top": 70
                               },
-                              "color": ["#bde475", "#f4a17d", "#FCCD9F"],
+                              "color": ["#f4a17d", "#bde475", "#FCCD9F"],
                               "legend": {
                                 "bottom": 0
                               },
@@ -1068,7 +1060,16 @@ pages:
                               "yAxis": [
                                 {
                                   "type": "value",
-                                  "name": "Issues"
+                                  "name": "Issues",
+                                  "min": -30,
+                                  "max": 30
+                                },
+                                {
+                                  "type": "value",
+                                  "name": "Opened issues",
+                                  "inverse": true,
+                                  "min": -30,
+                                  "max": 30
                                 }
                               ],
                               "tooltip": {
@@ -1096,6 +1097,7 @@ pages:
                                         "textBorderWidth": 0,
                                         "position": "top"
                                       },
+                                      "yAxisIndex": 1,
                                       "type": "bar"
                                   },
                                   {
@@ -1105,6 +1107,7 @@ pages:
                                         "textBorderWidth": 0,
                                         "position": "bottom"
                                       },
+                                      "yAxisIndex": 0,
                                       "type": "bar"
                                   },
                                   {
@@ -1112,6 +1115,7 @@ pages:
                                         "color": "#FFF8D6"
                                       },
                                       "z": 0,
+                                      "yAxisIndex": 0,
                                       "type": "line"
                                   }
                               ]
@@ -1123,8 +1127,8 @@ pages:
                       source: Month
                     functions:
                       - source: Month
-                      - source: Closed issues
                       - source: Opened issues
+                      - source: Closed issues
                       - source: Issue delta
   - name: Adoption
     properties:
