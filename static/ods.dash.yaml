@@ -219,7 +219,7 @@ pages:
           text-align: center
         html: >-
           <h1 style="font-size: xx-large; font-weight: bolder; font-family: 'Source Sans Pro';">OVHcloud Design System - Stats</h1>
-          <em>Last updated: 02/05/24</em>
+          <em>Last updated: 15/05/24</em>
       - type: TABS
         properties:
           width: 100%
@@ -312,7 +312,7 @@ pages:
                                 "grid": {
                                   "top": 70
                                 },
-                                "color": ["#ed743e", "#00185e"],
+                                "color": ["#FCCD9F", "#00185e"],
                                 "legend": {
                                   "bottom": 0
                                 },
@@ -343,17 +343,20 @@ pages:
                                 },
                                 "series": [
                                     {
+                                        "endLabel": {
+                                          "show": true
+                                        },
                                         "type": "line",
                                         "axisLabel": {
                                           "internal": "auto"
+                                        },
+                                        "areaStyle": {
+                                          "color": "#FFF8D6"
                                         }
                                     },
                                     {
                                         "label": {
                                           "show": true
-                                        },
-                                        "areaStyle": {
-                                          "color": "#def8ff"
                                         },
                                         "type": "line",
                                         "axisLabel": {
