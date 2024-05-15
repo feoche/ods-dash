@@ -16,18 +16,44 @@ datasets:
   - uuid: component_identified_count
     content: >-
       [
-        [50]
+        ["21/09", 28],
+        ["21/10", 29],
+        ["21/11", 30],
+        ["21/12", 30],
+        ["22/01", 30],
+        ["22/02", 30],
+        ["22/03", 31],
+        ["22/04", 31],
+        ["22/05", 33],
+        ["22/06", 33],
+        ["22/07", 38],
+        ["22/08", 42],
+        ["22/09", 44],
+        ["22/10", 44],
+        ["22/11", 44],
+        ["22/12", 49],
+        ["22/01", 50],
+        ["22/02", 51],
+        ["22/03", 52],
+        ["23/04", 56],
+        ["23/05", 56],
+        ["23/06", 58],
+        ["23/07", 56],
+        ["23/08", 57],
+        ["23/09", 58],
+        ["23/10", 59],
+        ["23/11", 59],
+        ["23/12", 59],
+        ["24/01", 59],
+        ["24/02", 61],
+        ["24/03", 61],
+        ["24/04", 58],
+        ["24/05", 57],
       ]
     columns:
-      - id: Amount
-        type: NUMBER
-  - uuid: component_created_count
-    content: >-
-      [
-        [46]
-      ]
-    columns:
-      - id: Amount
+      - id: Month
+        type: LABEL
+      - id: Identified components
         type: NUMBER
   - uuid: libraries_count
     content: >-
@@ -74,7 +100,7 @@ datasets:
         ["24/04", 1, 11, 46],
       ]
     columns:
-      - id: Quarter
+      - id: Month
         type: LABEL
       - id: Components created
         type: NUMBER
@@ -263,14 +289,18 @@ pages:
                 general: 
                   title: Identified components
                 columns:
-                    - id: Count
+                    - id: Identified components
                       pattern: "#"
                 lookup:
                     uuid: component_identified_count
+                    rowCount: 1
+                    sort:
+                      - order: DESCENDING
+                        column: Month
                     group:
                     - functions:
-                        - source: Count
-                          function: SUM
+                        - source: Identified components
+                        - source: Month
         - span: 4
           components:
             - displayer:
@@ -388,9 +418,9 @@ pages:
                   uuid: component_count
                   group:
                     - columnGroup:
-                        source: Quarter
+                        source: Month
                       functions:
-                        - source: Quarter
+                        - source: Month
                         - source: Sum of distinct components
         - span: 6
           properties:
@@ -478,9 +508,9 @@ pages:
                   uuid: component_count
                   group:
                     - columnGroup:
-                        source: Quarter
+                        source: Month
                       functions:
-                        - source: Quarter
+                        - source: Month
                         - source: Components created
                         - source: Components updated
   - name: Documentation
