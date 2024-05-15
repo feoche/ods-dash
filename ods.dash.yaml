@@ -323,7 +323,8 @@ pages:
                                   "axisLabel": {
                                     "interval": 0,
                                     "rotate": 50,
-                                    "margin": 12
+                                    "margin": 12,
+                                    "hideOverlap": true
                                   }
                                 }],
                               "yAxis": [
@@ -343,8 +344,11 @@ pages:
                                 },
                                 "series": [
                                     {
-                                        "endLabel": {
+                                        "label": {
                                           "show": true
+                                        },
+                                        "labelLayout": {
+                                          "hideOverlap": true
                                         },
                                         "type": "line",
                                         "axisLabel": {
@@ -357,6 +361,9 @@ pages:
                                     {
                                         "label": {
                                           "show": true
+                                        },
+                                        "labelLayout": {
+                                          "hideOverlap": true
                                         },
                                         "type": "line",
                                         "axisLabel": {
@@ -407,7 +414,8 @@ pages:
                                   "axisLabel": {
                                     "interval": 0,
                                     "rotate": 50,
-                                    "margin": 12
+                                    "margin": 12,
+                                    "hideOverlap": true
                                   },
                                   "axisPointer": {
                                     "type": "shadow"
@@ -444,6 +452,9 @@ pages:
                                           "shadowColor": "transparent",
                                           "textBorderColor": "none"
                                         },
+                                        "labelLayout": {
+                                          "hideOverlap": true
+                                        },
                                         "stack": "components",
                                         "type": "bar"
                                     },
@@ -453,6 +464,9 @@ pages:
                                           "color": "#fff",
                                           "shadowColor": "transparent",
                                           "textBorderColor": "none"
+                                        },
+                                        "labelLayout": {
+                                          "hideOverlap": true
                                         },
                                         "stack": "components",
                                         "type": "bar"
@@ -567,7 +581,8 @@ pages:
                                   "axisLabel": {
                                     "interval": 0,
                                     "rotate": 50,
-                                    "margin": 12
+                                    "margin": 12,
+                                    "hideOverlap": true
                                   },
                                   "axisPointer": {
                                     "type": "shadow"
@@ -600,6 +615,9 @@ pages:
                                     {
                                         "label": {
                                           "show": true
+                                        },
+                                        "labelLayout": {
+                                          "hideOverlap": true
                                         },
                                         "type": "line"
                                     }
@@ -643,7 +661,8 @@ pages:
                                   "axisLabel": {
                                     "interval": 0,
                                     "rotate": 50,
-                                    "margin": 12
+                                    "margin": 12,
+                                    "hideOverlap": true
                                   },
                                   "axisPointer": {
                                     "type": "shadow"
@@ -679,6 +698,9 @@ pages:
                                           "color": "#fff",
                                           "shadowColor": "transparent",
                                           "textBorderColor": "none"
+                                        },
+                                        "labelLayout": {
+                                          "hideOverlap": true
                                         },
                                         "yAxisIndex": 0,
                                         "type": "bar"
@@ -797,7 +819,8 @@ pages:
                                   "axisLabel": {
                                     "interval": 0,
                                     "rotate": 50,
-                                    "margin": 12
+                                    "margin": 12,
+                                    "hideOverlap": true
                                   },
                                   "axisPointer": {
                                     "type": "shadow"
@@ -894,6 +917,9 @@ pages:
                                         "label": {
                                           "formatter": "{b} ({d}%)",
                                           "overflow": "break"
+                                        },
+                                        "labelLayout": {
+                                          "hideOverlap": true
                                         },
                                         "type": "pie"
                                     }
@@ -1037,7 +1063,8 @@ pages:
                                 "axisLabel": {
                                   "interval": 0,
                                   "rotate": 50,
-                                  "margin": 12
+                                  "margin": 12,
+                                  "hideOverflow": true
                                 },
                                 "axisPointer": {
                                   "type": "shadow"
@@ -1083,6 +1110,9 @@ pages:
                                         "textBorderWidth": 0,
                                         "position": "top"
                                       },
+                                      "labelLayout": {
+                                        "hideOverlap": true
+                                      },
                                       "yAxisIndex": 1,
                                       "type": "bar"
                                   },
@@ -1093,12 +1123,18 @@ pages:
                                         "textBorderWidth": 0,
                                         "position": "bottom"
                                       },
+                                      "labelLayout": {
+                                        "hideOverlap": true
+                                      },
                                       "yAxisIndex": 0,
                                       "type": "bar"
                                   },
                                   {
                                       "areaStyle": {
                                         "color": "#FFF8D6"
+                                      },
+                                      "labelLayout": {
+                                        "hideOverlap": true
                                       },
                                       "z": 0,
                                       "yAxisIndex": 0,
@@ -1221,7 +1257,8 @@ pages:
                                   "axisLabel": {
                                     "interval": 0,
                                     "rotate": 50,
-                                    "margin": 12
+                                    "margin": 12,
+                                    "hideOverlap": true
                                   },
                                   "axisPointer": {
                                     "type": "shadow"
@@ -1267,6 +1304,9 @@ pages:
                                         "type": "line",
                                         "areaStyle": {
                                           "color": "#def8ff"
+                                        },
+                                        "labelLayout": {
+                                          "hideOverlap": true
                                         },
                                         "z": 0,
                                         "type": "line"
@@ -1317,6 +1357,9 @@ pages:
                                         "label": {
                                           "formatter": "{b} ({d}%)",
                                           "overflow": "break"
+                                        },
+                                        "labelLayout": {
+                                          "hideOverlap": true
                                         },
                                         "type": "pie"
                                     }
