@@ -73,6 +73,7 @@ datasets:
       [
         ["24/03", 36, 1628],
         ["24/04", 78, 2036],
+        ["24/05", 30, 1091],
       ]
     columns:
       - id: Month
@@ -165,7 +166,7 @@ datasets:
         type: NUMBER
       - id: Issue delta
         type: NUMBER
-  - uuid: adoption_prods
+  - uuid: operational_prods
     content: >-
       [
         ["23/10", 1, 0, 0, 1],
@@ -188,7 +189,7 @@ datasets:
         type: NUMBER
       - id: Aggregated
         type: NUMBER
-  - uuid: adoption_prod_types
+  - uuid: operational_prod_types
     content: >-
       [
         ["Tech - For external UIs", 12],
@@ -200,7 +201,7 @@ datasets:
         type: LABEL
       - id: Count
         type: NUMBER
-  - uuid: adoption_coverage
+  - uuid: operational_coverage
     content: >-
       [
         ["Expected", 0.81],
@@ -1157,7 +1158,7 @@ pages:
                       - source: Opened issues
                       - source: Closed issues
                       - source: Issue delta
-  - name: Adoption
+  - name: Operational
     properties:
       margin: 30px
     rows:
@@ -1166,7 +1167,7 @@ pages:
             components:
               - html: >-
                   <p style="font-family: 'Source Sans Pro'; font-weight: 600; color: #00185e">
-                    ODS' adoption<hr />
+                    ODS' productions<hr />
                   </p>
                 properties:
                   font-size: xx-large
@@ -1185,7 +1186,7 @@ pages:
                       - id: Aggregated
                         pattern: "#"
                   lookup:
-                      uuid: adoption_prods
+                      uuid: operational_prods
                       rowCount: 1
                       sort:
                         - order: DESCENDING
@@ -1207,7 +1208,7 @@ pages:
                       - id: Count
                         pattern: "# %"
                   lookup:
-                      uuid: adoption_coverage
+                      uuid: operational_coverage
                       filter:
                         - column: Name
                           function: EQUALS_TO
@@ -1226,7 +1227,7 @@ pages:
                       - id: Count
                         pattern: "# %"
                   lookup:
-                      uuid: adoption_coverage
+                      uuid: operational_coverage
                       filter:
                         - column: Name
                           function: EQUALS_TO
@@ -1306,12 +1307,18 @@ pages:
                                         "type": "bar"
                                     },
                                     {
-                                        "type": "line",
-                                        "areaStyle": {
-                                          "color": "#def8ff"
+                                        "label": {
+                                          "show": true
                                         },
                                         "labelLayout": {
                                           "hideOverlap": true
+                                        },
+                                        "type": "line",
+                                        "axisLabel": {
+                                          "internal": "auto"
+                                        },
+                                        "areaStyle": {
+                                          "color": "#def8ff"
                                         },
                                         "z": 0,
                                         "type": "line"
@@ -1319,7 +1326,7 @@ pages:
                                 ]
                             }
                 lookup:
-                  uuid: adoption_prods
+                  uuid: operational_prods
                   group:
                     - columnGroup:
                         source: Month
@@ -1371,7 +1378,7 @@ pages:
                                 ]
                             }
                 lookup:
-                  uuid: adoption_prod_types
+                  uuid: operational_prod_types
                   group:
                     - columnGroup:
                         source: Name
