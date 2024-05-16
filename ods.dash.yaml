@@ -95,7 +95,8 @@ datasets:
         ["24/01", 10, 4, 6, 4, 1, 25],
         ["24/02", 3, 0, 1, 1, 0, 5],
         ["24/03", 3, 2, 0, 1, 0, 6],
-        ["24/04", 3, 2, 0, 1, 0, 6],
+        ["24/04", 3, 2, 0, 3, 0, 8],
+        ["24/05", 1, 0, 0, 2, 1, 4],
       ]
     columns:
       - id: Month
@@ -109,11 +110,11 @@ datasets:
   - uuid: run_types
     content: >-
       [
-        ["ODS issues", 53],
+        ["ODS issues", 54],
         ["ODS features", 17],
         ["Documentation", 22],
-        ["Troubleshoot", 14],
-        ["Design", 4],
+        ["Troubleshoot", 18],
+        ["Design", 5],
       ]
     columns:
       - id: Name
@@ -152,7 +153,8 @@ datasets:
         ["24/01", 5, 8, -15],
         ["24/02", 5, 5, -15],
         ["24/03", 7, 4, -18],
-        ["24/04", 3, 0, -21]
+        ["24/04", 3, 0, -21],
+        ["24/05", 1, 0, -22]
       ]
     columns:
       - id: Month
@@ -173,6 +175,7 @@ datasets:
         ["24/02", 0, 0, 0, 9],
         ["24/03", 0, 7, 0, 16],
         ["24/04", 0, 1, 0, 17],
+        ["24/05", 0, 0, 0, 17],
       ]
     columns:
       - id: Month
@@ -435,12 +438,10 @@ pages:
                                     }
                                   }
                                 },
+                                "barMinHeight": 1,
                                 "toolbox": {
                                     "feature": {
                                         "dataZoom": {},
-                                        "magicType": {
-                                            "type": ["line", "bar"]
-                                        },
                                         "restore": {}
                                     }
                                 },
@@ -448,6 +449,7 @@ pages:
                                     {
                                         "label": {
                                           "show": true,
+                                          "position": "insideTop",
                                           "color": "#fff",
                                           "shadowColor": "transparent",
                                           "textBorderColor": "none"
@@ -456,11 +458,13 @@ pages:
                                           "hideOverlap": true
                                         },
                                         "stack": "components",
+                                        "clip": true,
                                         "type": "bar"
                                     },
                                     {
                                         "label": {
                                           "show": true,
+                                          "position": "insideTop",
                                           "color": "#fff",
                                           "shadowColor": "transparent",
                                           "textBorderColor": "none"
@@ -469,6 +473,7 @@ pages:
                                           "hideOverlap": true
                                         },
                                         "stack": "components",
+                                        "clip": true,
                                         "type": "bar"
                                     }
                                 ]
