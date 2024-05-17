@@ -239,6 +239,19 @@ datasets:
         type: NUMBER
       - id: Technical impression
         type: NUMBER
+  - uuid: improvements
+    content: >-
+      [
+        ["24/04", 0.15, 0.05],
+        ["24/05", 0.15, 0.05]
+      ]
+    columns:
+      - id: Month
+        type: LABEL
+      - id: Design improvement
+        type: NUMBER
+      - id: Development improvement
+        type: NUMBER
 pages:
   - name: index
     components:
@@ -792,7 +805,7 @@ pages:
               - displayer:
                   type: METRIC
                   general: 
-                    title: Issues found (this month)
+                    title: Opened issues (this month)
                   columns:
                       - id: ODS issue
                         pattern: "#"
@@ -811,7 +824,7 @@ pages:
               - displayer:
                   type: METRIC
                   general: 
-                    title: Features asked (this month)
+                    title: Feature asked (this month)
                   columns:
                       - id: ODS feature
                         pattern: "#"
@@ -1492,6 +1505,66 @@ pages:
                   </ul>
                 properties:
                   font-size: large
+  - name: Impacts
+    properties:
+      margin: 30px
+    rows:
+      - columns:
+          - span: 12
+            components:
+              - html: >-
+                  <p style="font-family: 'Source Sans Pro'; font-weight: 600; color: #00185e">
+                    Impacts<hr />
+                  </p>
+                properties:
+                  font-size: xx-large
+                  margin-bottom: 30px
+          - span: 4
+            properties:
+              font-size: xx-large
+              margin-bottom: 30px
+            components:
+              - displayer:
+                  type: METRIC
+                  accumulate: true
+                  general: 
+                    title: Design efficiency improvement
+                  columns:
+                        - id: Design improvement
+                          pattern: "+# %"
+                  lookup:
+                      uuid: improvements
+                      rowCount: 1
+                      sort:
+                        - order: DESCENDING
+                          column: Month
+                      group:
+                      - functions:
+                          - source: Design improvement
+                          - source: Month
+          - span: 4
+            properties:
+              font-size: xx-large
+              margin-bottom: 30px
+            components:
+              - displayer:
+                  type: METRIC
+                  accumulate: true
+                  general: 
+                    title: Development efficiency improvement
+                  columns:
+                        - id: Development improvement
+                          pattern: "+# %"
+                  lookup:
+                      uuid: improvements
+                      rowCount: 1
+                      sort:
+                        - order: DESCENDING
+                          column: Month
+                      group:
+                      - functions:
+                          - source: Development improvement
+                          - source: Month
 navTree:
   root_items:
     - type: GROUP
