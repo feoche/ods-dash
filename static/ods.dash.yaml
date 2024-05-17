@@ -824,7 +824,7 @@ pages:
               - displayer:
                   type: METRIC
                   general: 
-                    title: Feature asked (this month)
+                    title: Features asked (this month)
                   columns:
                       - id: ODS feature
                         pattern: "#"
