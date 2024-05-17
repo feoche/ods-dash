@@ -1438,7 +1438,7 @@ pages:
                     title: Overall impression<br>(Docs / Design / Dev)
                   columns:
                         - id: Overall impression
-                          pattern: "0.00/₁₀"
+                          pattern: "0.0⸝₁₀"
                   lookup:
                       uuid: surveys
                       rowCount: 1
@@ -1459,6 +1459,9 @@ pages:
                   accumulate: true
                   general: 
                     title: Technical impression /<br>Technical experience
+                  columns:
+                        - id: Technical impression
+                          pattern: "0.0⸝₁₀"
                   lookup:
                       uuid: surveys
                       rowCount: 1
@@ -1469,174 +1472,21 @@ pages:
                       - functions:
                           - source: Technical impression
                           - source: Month
-          - span: 4
+          - span: 12
             components:
-              - displayer:
-                  type: METRIC
-                  general: 
-                    title: Current component coverage in new productions
-                  columns:
-                      - id: Count
-                        pattern: "# %"
-                  lookup:
-                      uuid: operational_coverage
-                      filter:
-                        - column: Name
-                          function: EQUALS_TO
-                          args:
-                            - "Current"
-                      group:
-                      - functions:
-                          - source: Count
-          - span: 7
-            components:
-            - displayer:
-                component: echarts
-                echarts:
-                    option: >-
-                            {
-                                "title": {
-                                  "text": "Prodded projects with ODS (by month)",
-                                  "textStyle": {
-                                    "color": "#00185e"
-                                  }
-                                },
-                                "grid": {
-                                  "top": 70
-                                },
-                                "color": ["#00185e", "#000e9c", "#0050d5", "#147de8", "#4ab0f5", "#73e3ff", "#7f7f7f", "#bfbfbf"],
-                                "legend": {
-                                  "bottom": 0
-                                },
-                                "xAxis": [{
-                                  "axisTick": {
-                                    "alignWithLabel": true
-                                  },
-                                  "axisLabel": {
-                                    "interval": 0,
-                                    "rotate": 50,
-                                    "margin": 12,
-                                    "hideOverlap": true
-                                  },
-                                  "axisPointer": {
-                                    "type": "shadow"
-                                  }
-                                }],
-                                "yAxis": [
-                                  {
-                                    "type": "value",
-                                    "name": "Number of\nprodded projects"
-                                  }
-                                ],
-                                "tooltip": {
-                                  "trigger": "axis",
-                                  "axisPointer": {
-                                    "crossStyle": {
-                                      "color": "#999"
-                                    }
-                                  }
-                                },
-                                "toolbox": {
-                                    "feature": {
-                                        "dataZoom": {},
-                                        "magicType": {
-                                            "type": ["line", "bar"]
-                                        },
-                                        "restore": {}
-                                    }
-                                },
-                                "series": [
-                                    {
-                                        "stack": "Run",
-                                        "type": "bar"
-                                    },
-                                    {
-                                        "stack": "Run",
-                                        "type": "bar"
-                                    },
-                                    {
-                                        "stack": "Run",
-                                        "type": "bar"
-                                    },
-                                    {
-                                        "label": {
-                                          "show": true
-                                        },
-                                        "labelLayout": {
-                                          "hideOverlap": true
-                                        },
-                                        "type": "line",
-                                        "axisLabel": {
-                                          "internal": "auto"
-                                        },
-                                        "areaStyle": {
-                                          "color": "#def8ff"
-                                        },
-                                        "z": 0,
-                                        "type": "line"
-                                    }
-                                ]
-                            }
-                lookup:
-                  uuid: operational_prods
-                  group:
-                    - columnGroup:
-                        source: Month
-                      functions:
-                        - source: Month
-                        - source: Tech - External
-                        - source: Tech - Internal
-                        - source: Design
-                        - source: Aggregated
-          - span: 4
-            components:
-            - displayer:
-                component: echarts
-                echarts:
-                    option: >-
-                            {
-                                "title": {
-                                  "text": "Types of ODS usage",
-                                  "textStyle": {
-                                    "color": "#00185e"
-                                  }
-                                },
-                                "grid": {
-                                  "top": 70,
-                                  "bottom": 0
-                                },
-                                "color": ["#00185e", "#000e9c", "#0050d5", "#147de8", "#4ab0f5", "#73e3ff", "#7f7f7f", "#bfbfbf"],
-                                "tooltip": {
-                                  "trigger": "item"
-                                },
-                                "toolbox": {
-                                    "feature": {
-                                        "dataZoom": {},
-                                        "restore": {}
-                                    }
-                                },
-                                "series": [
-                                    {       
-                                        "top": 30,     
-                                        "label": {
-                                          "formatter": "{b} ({d}%)",
-                                          "overflow": "break"
-                                        },
-                                        "labelLayout": {
-                                          "hideOverlap": true
-                                        },
-                                        "type": "pie"
-                                    }
-                                ]
-                            }
-                lookup:
-                  uuid: operational_prod_types
-                  group:
-                    - columnGroup:
-                        source: Name
-                      functions:
-                        - source: Name
-                        - source: Count
+              - html: >-
+                  <p style="font-family: 'Source Sans Pro'; font-weight: 600; color: #00185e">
+                    Verbatim<hr />
+                    « A single reference for UI questions »
+« Eases cohérence between different UI typologies » 
+« Useful for POs to get what’s currently possible in our Uis »
+« Reactive team to solve bugs / optimizations that comes »
+« Time gain on integration, if based only on ODS components : no CSS, less JS »
+
+                  </p>
+                properties:
+                  font-size: large
+                  margin-bottom: 30px
 navTree:
   root_items:
     - type: GROUP
