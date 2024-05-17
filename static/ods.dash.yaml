@@ -1477,16 +1477,21 @@ pages:
               - html: >-
                   <p style="font-family: 'Source Sans Pro'; font-weight: 600; color: #00185e">
                     Verbatim<hr />
-                    « A single reference for UI questions »
-« Eases cohérence between different UI typologies » 
-« Useful for POs to get what’s currently possible in our Uis »
-« Reactive team to solve bugs / optimizations that comes »
-« Time gain on integration, if based only on ODS components : no CSS, less JS »
-
                   </p>
                 properties:
+                  font-size: x-large
+          - span: 12
+            components:
+              - html: >-
+                  <ul style="font-family: 'Source Sans Pro'; color: #00185e">
+                    <li>« A single reference for UI questions »</li>
+                    <li>« Eases coherence between different UI typologies »</li>
+                    <li>« Useful for POs to get what’s currently possible in our Uis »</li>
+                    <li>« Reactive team to solve bugs / optimizations that comes »</li>
+                    <li>« Time gain on integration, if based only on ODS components : no CSS, less JS »</li>
+                  </ul>
+                properties:
                   font-size: large
-                  margin-bottom: 30px
 navTree:
   root_items:
     - type: GROUP
