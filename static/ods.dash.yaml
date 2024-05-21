@@ -239,6 +239,31 @@ datasets:
         type: NUMBER
       - id: Technical impression
         type: NUMBER
+  - uuid: contributions
+    content: >-
+      [
+        ["23/02", 0],
+        ["23/03", 0],
+        ["23/04", 1],
+        ["23/05", 1],
+        ["23/06", 0],
+        ["23/07", 0],
+        ["23/08", 0],
+        ["23/09", 0],
+        ["23/10", 0],
+        ["23/11", 0],
+        ["23/12", 0],
+        ["24/01", 0],
+        ["24/02", 0],
+        ["24/03", 0],
+        ["24/04", 0],
+        ["24/05", 0]
+      ]
+    columns:
+      - id: Month
+        type: LABEL
+      - id: Contributions
+        type: NUMBER
   - uuid: improvements
     content: >-
       [
@@ -977,8 +1002,9 @@ pages:
                     - columnGroup:
                         source: Name
                       functions:
-                        - source: Name
                         - source: Count
+                          function: SUM
+                        - source: Name
           - span: 12
             components:
               - html: >-
@@ -1485,6 +1511,25 @@ pages:
                       - functions:
                           - source: Technical impression
                           - source: Month
+          - span: 4
+            properties:
+              font-size: xx-large
+              margin-bottom: 30px
+            components:
+              - displayer:
+                  type: METRIC
+                  accumulate: true
+                  general: 
+                    title: External contributions
+                  columns:
+                        - id: Contributions
+                          pattern: "#"
+                  lookup:
+                      uuid: contributions
+                      group:
+                      - functions:
+                          - source: Contributions
+                            function: SUM
           - span: 12
             components:
               - html: >-
