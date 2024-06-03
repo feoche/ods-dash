@@ -288,7 +288,7 @@ pages:
           text-align: center
         html: >-
           <h1 style="font-size: xx-large; font-weight: bolder; font-family: 'Source Sans Pro';">OVHcloud Design System - Stats</h1>
-          <em>Last updated: 15/05/24</em>
+          <em>Last updated: 01/06/24</em>
       - type: TABS
         properties:
           width: 100%
