@@ -56,7 +56,7 @@ datasets:
         ["24/02", 61, 0, 0, 45],
         ["24/03", 61, 0, 3, 45],
         ["24/04", 58, 1, 10, 46],
-        ["24/05", 57, 0, 11, 46],
+        ["24/05", 57, 0, 13, 46],
       ]
     columns:
       - id: Month
@@ -73,7 +73,7 @@ datasets:
       [
         ["24/03", 36, 1628],
         ["24/04", 78, 2036],
-        ["24/05", 30, 1091],
+        ["24/05", 61, 2203],
       ]
     columns:
       - id: Month
@@ -97,7 +97,7 @@ datasets:
         ["24/02", 3, 0, 1, 1, 0, 5],
         ["24/03", 3, 2, 0, 1, 0, 6],
         ["24/04", 3, 2, 0, 3, 0, 8],
-        ["24/05", 1, 0, 0, 2, 1, 4],
+        ["24/05", 3, 0, 0, 2, 0, 5],
       ]
     columns:
       - id: Month
@@ -111,11 +111,11 @@ datasets:
   - uuid: run_types
     content: >-
       [
-        ["ODS issues", 54],
+        ["ODS issues", 58],
         ["ODS features", 17],
         ["Documentation", 22],
         ["Troubleshoot", 18],
-        ["Design", 5],
+        ["Design", 4],
       ]
     columns:
       - id: Name
@@ -155,7 +155,7 @@ datasets:
         ["24/02", 5, 5, -15],
         ["24/03", 7, 4, -18],
         ["24/04", 3, 0, -21],
-        ["24/05", 1, 0, -22]
+        ["24/05", 2, 0, -23]
       ]
     columns:
       - id: Month
@@ -176,7 +176,7 @@ datasets:
         ["24/02", 0, 0, 0, 9],
         ["24/03", 0, 7, 0, 16],
         ["24/04", 0, 1, 0, 17],
-        ["24/05", 0, 0, 0, 17],
+        ["24/05", 0, 0, 1, 18],
       ]
     columns:
       - id: Month
@@ -192,8 +192,8 @@ datasets:
   - uuid: operational_prod_types
     content: >-
       [
-        ["Tech - For external UIs", 12],
-        ["Tech - For internal UIs", 1],
+        ["Tech - For external UIs", 14],
+        ["Tech - For internal UIs", 2],
         ["Design", 2]
       ]
     columns:
@@ -204,8 +204,8 @@ datasets:
   - uuid: operational_coverage
     content: >-
       [
-        ["Expected", 0.81],
-        ["Current", 0.60]
+        ["Expected", 0.82],
+        ["Current", 0.63]
       ]
     columns:
       - id: Name
